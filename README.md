@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏥 Rawat Inap App (Frontend Test)
 
-## Getting Started
+Aplikasi sederhana untuk mengelola data pasien rawat inap. Dibuat menggunakan **Next.js + TypeScript + TailwindCSS + shadcn/ui** sebagai bagian dari technical test frontend.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* **Next.js (App Router)**
+* **TypeScript**
+* **TailwindCSS**
+* **shadcn/ui**
+* **Zustand (State Management)**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Fitur Utama
 
-## Learn More
+### 1. 📋 Dashboard Pasien
 
-To learn more about Next.js, take a look at the following resources:
+* Menampilkan daftar pasien rawat inap
+* Data menggunakan mock (simulasi API dengan delay 500ms)
+* Fitur:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  * 🔍 Search berdasarkan Nama / NIK
+  * 📄 Pagination (client-side)
+  * ⏳ Loading state
+  * 📭 Empty state
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+### 2. ➕ Tambah Pasien
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* Form input data pasien:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+  * Nama
+  * NIK
+  * Diagnosa
+  * Tanggal Masuk
+  * Dokter Penanggung Jawab
+  * Ruangan
+* Validasi form:
+
+  * Field required
+  * NIK harus 16 digit
+* Setelah submit:
+
+  * Data langsung masuk ke tabel (state global)
+  * Redirect ke dashboard
+
+---
+
+## 📌 Catatan
+
+* Data pasien disimpan menggunakan state management (Zustand)
+* Data **tidak persisten setelah refresh** karena menggunakan mock (tanpa backend / database)
+* Loading state disimulasikan dengan delay 500ms
+
+---
+
+## 🎯 Scope & Pertimbangan
+
+Aplikasi ini dibuat sesuai dengan kebutuhan **technical test level junior**, dengan fokus pada:
+
+* Struktur code yang rapi
+* Penggunaan TypeScript
+* Reusable component
+* State management sederhana
+* UX dasar (loading, empty state, validation)
+
+---
